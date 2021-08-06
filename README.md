@@ -8,15 +8,15 @@ Getting our machine ready:
 This is a native python project and uses python environment and libraries to run.
 
 Following Python libraries are required to run the code on your machine:
-pygame
-numpy
+pygame,
+numpy,
 python 3.x (prefered 3.7.7 or higher)
 
 pygame is an python library used to buld 2d games, we can install it using pip or python3 command run any of the following command
-pip intall pygame
-python3 -m pip install -U pygame --user
+<img width="667" alt="Screenshot 2021-08-07 at 12 20 59 AM" src="https://user-images.githubusercontent.com/17786795/128558352-af449c94-cd03-4b1d-b397-b48677781431.png">
+or pip install pygame
 
-Make sure pygame is installed successfully. Also if you run on python 3.7.7 or higher it will be better.I ran on python 3.8 and it worked well on my machine.
+Make sure pygame is installed successfully by seeing if it gets imported or not. Also if you run on python 3.7.7 or higher it will be better.I ran on python 3.8 and it worked well on my machine.
 
 
 How to run the code?
