@@ -51,7 +51,36 @@ Here as we can see with 3 clicks in different regions of screen 3 clusters were 
 
 number_points_per_cluster = 25, spread = 10
 <img width="1440" alt="Screenshot 2021-08-06 at 11 36 41 PM" src="https://user-images.githubusercontent.com/17786795/128553885-6ec715cb-ae3c-4390-a307-ee74b5cc4179.png">
-Here with differnt valus we can create differnt shape clusters also, just click on the screen in the shape u desire to create.
+Here with differnt values we can create differnt shape clusters also, just click on the screen in the shape u desire to create.
 
+with the same valraible values we can also create very dense clusters by repeteadlly clicking in and around a small region many times as shown below
+![image](https://user-images.githubusercontent.com/17786795/128554705-c2cb7c1c-7c83-4054-b55f-bcf56a9248a0.png)
+
+If we want to add single points one by one in our screen we can do that by just pressing key o from our keyboard.
+just move your mouse cursor to the posiiton you want to create a single data point and then press o
+This is a very good way if we want to create some sparser clusters and if we want outlier points in our data , as shown below:
+![image](https://user-images.githubusercontent.com/17786795/128555651-1a49eb7c-47da-4cdc-99ab-3f0cbb4964ad.png)
+Here by repeated pressing of key o we can create such clusters also.
+
+At any point of time when algorithm is not running if you want to clear your screen just press ESC key. It will remove all the datapoints on the screen and screen will be blank again.
+
+If you want to form different sizes clusters on the same screen , This can be done by first simple clicking on the screen as always to select the centers, ignore whatever clusters are created by doing this. Now remember that every odd numbered click that you clicked will create a smaller and denser cluster , Even numbered click will create a larger and sparser cluster. After doing this just press the 1 key on your keyboard. you should be able to see differnt sized clusters now.
+As shown below
+![image](https://user-images.githubusercontent.com/17786795/128557595-8f65d5ee-8c35-4887-b2c0-b11e4d7e43b6.png)
+
+Remeber you can always make your cluster even more denser by repeated clicking again on top of these points as shown below:
+![image](https://user-images.githubusercontent.com/17786795/128557739-b7018796-2cb3-4101-9505-93acbea8018b.png)
+Here i repeated clicked on the small sized clusters to make them more dense.
+
+
+
+
+
+
+Since we know now how to create dataset lets move on to how to run algorithms on our data set?
+
+Kmeans:
+Once our data set is created to run kmeans on this data set press ENTER or RETURN. If Everything works well you will be now able to see Kmeans running on your screen.
+We can control how many clusters our algorithm will find by just changing the 
 
 
