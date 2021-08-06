@@ -57,7 +57,7 @@ with the same valraible values we can also create very dense clusters by repetea
 ![image](https://user-images.githubusercontent.com/17786795/128554705-c2cb7c1c-7c83-4054-b55f-bcf56a9248a0.png)
 
 If we want to add single points one by one in our screen we can do that by just pressing key o from our keyboard.
-just move your mouse cursor to the posiiton you want to create a single data point and then press o
+just move your mouse cursor to the posiiton you want to create a single data point(NOTE: Do not click on the point) and then press o
 This is a very good way if we want to create some sparser clusters and if we want outlier points in our data , as shown below:
 ![image](https://user-images.githubusercontent.com/17786795/128555651-1a49eb7c-47da-4cdc-99ab-3f0cbb4964ad.png)
 Here by repeated pressing of key o we can create such clusters also.
