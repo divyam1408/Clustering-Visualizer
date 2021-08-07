@@ -81,6 +81,105 @@ Since we know now how to create dataset lets move on to how to run algorithms on
 
 Kmeans:
 Once our data set is created to run kmeans on this data set press ENTER or RETURN. If Everything works well you will be now able to see Kmeans running on your screen.
-We can control how many clusters our algorithm will find by just changing the 
+We can control how many clusters our algorithm will find by just changing the in_clusters variable in the config.py file.
+
+We can also choose to run kmeans++ by pressing the k key from keyboeard.Only difference is rather than choosing the initial centroids randomly here we choose it probabistically.
+
+I ran Kmeans with different datasets showing its limitations as shown below:
+
+As we can see kmeans does not performs well on different sized clusters and tends to break the bigger cluster. Ran it with in_clusters = 3
+![image](https://user-images.githubusercontent.com/17786795/128588877-46e97845-a933-4f1f-9443-714db00e670f.png)
+
+Another problem of kmeans is when we have differnt densities clusters it then also it does not work ver well. Ran it with in_clusters = 3
+![image](https://user-images.githubusercontent.com/17786795/128588912-bc81a1df-a82e-4754-8d44-08a250746bc0.png)
+
+Kmeans does not perform well on non gobular structure also as shown below. in_clusters = 2.
+![image](https://user-images.githubusercontent.com/17786795/128589115-744e0722-3cf9-4373-a612-697dfed6d690.png)
+
+
+WE can overcome kmeans limitation by increasing the k or in_clusters in our case.
+Here the results i got when in_clusters = 7 for different data sets.
+![image](https://user-images.githubusercontent.com/17786795/128589084-95acc87b-81e1-419d-928c-be3e61a16246.png)
+
+![image](https://user-images.githubusercontent.com/17786795/128589106-3af8e39b-7fb0-4680-9507-1cd51f999854.png)
+
+![image](https://user-images.githubusercontent.com/17786795/128589125-b13d1a58-249e-4eba-a2bb-ec458fc49a89.png)
+
+
+Heirarchical Clustering:
+
+We can run the Agglomerative clustering algorithm.
+
+Here we have three options to provide the linkage parameter for this algorithm those are  MIN, MAX and WARD.
+
+
+To run this algorithm with MIN linkage just press l key from your keyboard after creating the data sets.
+To run this algorithm with MAX linkage just press g key from your keyboard after creating the data sets.
+To run this algorithm with WARD linkage just press w key from your keyboard after creating the data sets.
+
+However just as a note of caution since the runtime complexity of this algorithm is O(n^3) hence please be a bit patient with it while it is running on larger number of data points.
+You can always track the progress from your terminal also where each algorithm will display the stage that is being run.
+
+
+One of the strength of MIN linkage is that it can handle non elleptical clusters as shown:(in_clusters = 2)
+![image](https://user-images.githubusercontent.com/17786795/128589319-7efcdc59-a1b7-489a-b535-f3c502a80cce.png)
+
+Limitation of MIN is that it is too sensitive to noise or outliers
+![image](https://user-images.githubusercontent.com/17786795/128589357-b4dcfb79-c53e-4d41-be0d-2dd672491394.png)
+
+Limitation of MAX is that it tends to break larger clusterers as shown:
+![image](https://user-images.githubusercontent.com/17786795/128589392-690ca77c-0443-4c22-9281-229fbf161a84.png)
+
+
+DBSCAN:
+
+Density based clusestring is another algorithm that we can run.
+
+To run it just press d key from your keyboard.
+
+The behaviour of this algorithm is controlled by 3 variables nodes_in_leaf, eps and min_samples. nodes_in_leaf represents the minimum number of points we want to have in our leaves of the built kd tree.
+
+eps represents the radius of the hypercuboid we want to consider.
+
+min_samples represent the min points required by the any point in its surrounding area to be called as a core point.
+
+we can change these values to see the changes in our clustering.
+
+Also you can run dbscan for different eps values and check the result. For doing so just fill in the variable eps_list with differnt value that you want to try and run the algorithm.
+
+in the below examples the following values were used: number_points_per_cluster = 25, spread = 10, nodes_in_leaf = 6,eps = 8,min_samples = 4
+
+
+
+
+This algorithm runs in 2 stages:
+
+In stage 1 it calculates all the core, boundary and noise points in our data set. We can see it running on our visualizer where Green color represents core points,Blue color represents Boundary points and red color represents noise points.
+
+Here is the result i got while running it on a particular data set:
+![image](https://user-images.githubusercontent.com/17786795/128589655-11bf99e8-6981-46d6-93a2-7e46c2e91248.png)
+
+In stage 2 it clusters the given data set. Result that i got:
+![image](https://user-images.githubusercontent.com/17786795/128589678-eba33559-3747-4c52-baa0-419344eeebb4.png)
+
+
+Limitations of dbscan is that it does not work well with varying densities of clusters as shown :
+![image](https://user-images.githubusercontent.com/17786795/128589916-36f3da2c-6614-4d47-a96d-fa8844facb0f.png)
+
+Changing our variables a bit will also result in the following clustering:
+![image](https://user-images.githubusercontent.com/17786795/128590679-cd0025e8-6d4d-4c37-9b37-e3cbc32a7ad0.png)
+
+At any stage after the algorithm has finished if u wish to run another algorithm on the same dataset, just press r key it will reset your screen with original datapoints and run the desired algorithm.
+
+
+
+
+
+
+
+
+
+
+
 
 
