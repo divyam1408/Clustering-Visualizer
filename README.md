@@ -169,7 +169,16 @@ Limitations of dbscan is that it does not work well with varying densities of cl
 Changing our variables a bit will also result in the following clustering:
 ![image](https://user-images.githubusercontent.com/17786795/128590679-cd0025e8-6d4d-4c37-9b37-e3cbc32a7ad0.png)
 
+
+
+
 At any stage after the algorithm has finished if u wish to run another algorithm on the same dataset, just press r key it will reset your screen with original datapoints and run the desired algorithm.
+
+
+I hope this was helpful in running and understanding the visualizer. There will be shortcomings i know in this , but will try to my best to remove them with time.
+Thanks for reading.
+
+
 
 
 
