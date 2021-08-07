@@ -88,17 +88,19 @@ def main():
                     #display((0,0,0),pos)
                     ##pygame.draw.circle(background,Color(0,0,0),pos,3)
                     pos = pygame.mouse.get_pos()
-                    display((0,0,0),pos)
-                    x = pos[0]
-                    y = pos[1]
-                    kx_points = np.random.normal(x,spread,number_points_per_cluster)
-                    ky_points = np.random.normal(y,spread,number_points_per_cluster)
-                    k_points = list(zip(kx_points,ky_points))
-                    k_points.append((x,y))
-                    k_centers.append(pos)
-                    data_points.append(k_points)
+                    if(pos not in k_centers):
+                        #display((0,0,0),pos)
+                        x = pos[0]
+                        y = pos[1]
+                        kx_points = np.random.normal(x,spread,number_points_per_cluster)
+                        ky_points = np.random.normal(y,spread,number_points_per_cluster)
+                        k_points = list(zip(kx_points,ky_points))
 
-                    display((0,0,0))
+                        k_points.append((x,y))
+                        k_centers.append(pos)
+                        data_points.append(k_points)
+
+                        display((0,0,0))
 
                 #cluster limit reached
                 else:
