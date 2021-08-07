@@ -170,7 +170,7 @@ Changing our variables a bit will also result in the following clustering:
 ![image](https://user-images.githubusercontent.com/17786795/128590679-cd0025e8-6d4d-4c37-9b37-e3cbc32a7ad0.png)
 
 
-
+HOW TO RUN DIFFERRNT ALGORITHMS ON CREATED DATASET?
 
 At any stage after the algorithm has finished if u wish to run another algorithm on the same dataset, just press r key it will reset your screen with original datapoints and run the desired algorithm.
 
