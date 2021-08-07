@@ -52,6 +52,7 @@ def main():
 
     global data_points
     global linkage
+    global eps_list,eps
     pygame.init()
 
     # '''Showing default data configuration'''
@@ -69,7 +70,7 @@ def main():
     # pygame.display.flip()
 
     # Event loop
-    max_clusters = 1000
+    max_clusters = 10000
     clusters=0
     k_centers=[]
     outliers = []
@@ -130,14 +131,14 @@ def main():
                     flag=0
                     small_sample=50
                     large_sample = 500
-                    for point in data_points:
-                        display((255,255,255),point)
+                    background.fill((250, 250, 250))
                     data_points.clear()
                     if(data_points == []):
+                        print('here')
                         for x,y in k_centers:
                             if(flag%2 == 0):
-                                kx_points = np.random.normal(x,15,small_sample)
-                                ky_points = np.random.normal(y,15,small_sample)
+                                kx_points = np.random.normal(x,10,small_sample)
+                                ky_points = np.random.normal(y,10,small_sample)
                                 k_points = list(zip(kx_points,ky_points))
                                 flag += 1
                             else:
@@ -304,10 +305,15 @@ def main():
                 if(event.key == pygame.K_d):
                     if(clusters != 0):
                         print(clusters)
-                        if(in_clusters < 0):
+                        if(eps_list == []):
                             dbscan()
+
                         else:
-                            dbscan()
+                            for eps_ in eps_list:
+                                print('DBSCAN for eps = {}'.format(eps))
+                                eps = eps_
+                                dbscan()
+
                     else:
                         print('Please select some clusters!!!')
 
