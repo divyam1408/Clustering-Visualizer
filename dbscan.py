@@ -135,7 +135,7 @@ def core_point(query_point,data,to_find):
             #print(point)
             if(point in points_representation.keys()):
                 if(points_representation[point] == 'Core'):
-                    print('true',point)
+                    #print('true',point)
                     return True
         return False
     else:
@@ -285,3 +285,5 @@ def dbscan():
 
         if(points_representation[point] == 'Noise'):
             display((255,255,255),point)
+
+    print('***********Clustering Completed*****************')
